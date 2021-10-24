@@ -1,4 +1,5 @@
 let smallerTab
+let smallerTime
 let dateSelect
 
 const dateA = new Date("Nov 19, 2021 12:00:00")
@@ -38,12 +39,17 @@ function getDHMS() {
     let minutes = Math.floor((dateDifference % (1000 * 60 * 60)) / (1000 * 60))
     let seconds = Math.floor((dateDifference % (1000 * 60)) / 1000)
 
-    document.title = `${nextRelease} ${days} : ${hours} : ${minutes} : ${seconds}`
+    if (!smallerTime) {
+        document.title = `${nextRelease} ${days} : ${hours} : ${minutes} : ${seconds}`
+    } else {
+        document.title = `${nextRelease} ${days}:${hours}:${minutes}:${seconds}`
+    }
 }
 
 function getSettings() {
 
     smallerTab = document.querySelector(".smallerTab").checked
+    smallerTime = document.querySelector(".smallerTime").checked
     dateSelect = document.querySelector(".dateSelect").value
 }
 
