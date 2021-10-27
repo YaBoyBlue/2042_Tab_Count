@@ -2,8 +2,8 @@ let timeOnly
 let timeSmall
 let dateSelect
 
-const dateA = new Date("Nov 19, 2021 12:00:00")
-const dateB = new Date("Nov 12, 2021 12:00:00")
+const dateA = new Date("Nov 19, 2021 02:00:00")
+const dateB = new Date("Nov 12, 2021 02:00:00")
 const dateC = new Date("Nov 10, 2021 12:00:00")
 
 function getDHMS() {
